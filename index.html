@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>FineCar App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="dist/css/framework7.css">
+    <link rel="stylesheet" href="css/framework7.themes.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body class="layout-dark theme-orange">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <!-- <div class="content-block"> -->
+        <div class="content-block-title">Меню FineCar</div>
+          <div class="list-block">
+            <ul>
+              <li><a href="#home" class="item-link item-content">
+                  <div class="item-media"><i class="icon icon-form-name"></i></div>
+                  <div class="item-inner"> 
+                    <div class="item-title">Профайл</div>
+                  </div></a></li>
+              <li><a href="#home" class="item-link item-content">
+                  <div class="item-media"><i class="icon icon-receive-cash"></i></div>
+                  <div class="item-inner"> 
+                    <div class="item-title">Бонусы и скидки</div>
+                  </div></a></li>
+              <li><a href="#home" class="item-link item-content">
+                  <div class="item-media"><i class="icon icon-receive-cash"></i></div>
+                  <div class="item-inner"> 
+                    <div class="item-title">Акции</div>
+                  </div></a></li>
+              <li><a href="#home" class="item-link item-content">
+                  <div class="item-media"><i class="icon icon-conference"></i></div>
+                  <div class="item-inner"> 
+                    <div class="item-title">Отзывы</div>
+                  </div></a></li>
+          </ul>
+        </div>
+      <!-- </div> -->
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <!-- Navbar inner for Index page-->
+          <div data-page="index" class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">FineCar</div>
+          </div>
+          <!-- Navbar inner for Home page-->
+          <div data-page="home" class="navbar-inner cached">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">FineCar</div>
+            <div class="right">
+              <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+          <!-- Navbar inner for User registration page-->
+          <div data-page="user_registration" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Назад</span></a></div>
+            <div class="center sliding">Регистрация водителя</div>
+          </div>
+          <!-- Navbar inner for Auto registration page-->
+          <div data-page="auto_registration" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i> <span> Назад</span></a></div>
+            <div class="center sliding">Добавление Авто</div>
+          </div>
+          <!-- Navbar inner for Choice service page-->
+          <div data-page="choice_service" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i> <span> Назад</span></a></div>
+            <div class="center sliding">Выбор услуг</div>
+          </div>
+          <!-- Navbar inner for Shape service page-->
+          <div data-page="shape_service" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i> <span> Назад</span></a></div>
+            <div class="center sliding">Формирование услуг</div>
+          </div>
+          <!-- Navbar inner for Washer choice page-->
+          <div data-page="washer_choice" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i> <span> Назад</span></a></div>
+            <div class="center sliding">Выбор Автомойки</div>
+          </div>
+          <!-- Navbar inner for Time choice page-->
+          <div data-page="time_choice" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i> <span> Назад</span></a></div>
+            <div class="center sliding">Выбор Сеанса</div>
+          </div>
+          <!-- Navbar inner for Send tiket page-->
+          <div data-page="send_tiket" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i> <span> Назад</span></a></div>
+            <div class="center sliding">Отправить заявку</div>
+          </div>
+          <!-- Navbar inner for About page-->
+          <div data-page="about" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">About Us</div>
+          </div>
+          <!-- Navbar inner for Services page-->
+          <div data-page="services" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Services</div>
+          </div>
+          <!-- Navbar inner for Form page-->
+          <div data-page="form" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Form</div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="content-block-title">Добро пожаловать!</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <p>FineCar поможет легко и быстро помыть Ваш автомобиль!</p>
+                  <p>Все автомойки Вашего города в одном приложении.</p>
+                </div>
+              </div>
+              <div class="content-block-title">Вход в систему</div>
+              <div class="list-block inset">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="text" placeholder="Ваш телефон" class="">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="password" placeholder="Пароль" class="">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#home" class="button active">Войти</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#" class="button">Восстановить пароль</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block-title">Регистрация</div>
+              <div class="list-block inset">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#user_registration" class="button">Как водитель</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#" class="button">Как автомойка</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- User registration Page -->
+          <div data-page="user_registration" class="page cached">
+            <div class="page-content">
+              <div class="content-block-title">Введите данные</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="text" placeholder="Ваше имя">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="email" placeholder="E-mail">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-password"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="password" placeholder="Пароль">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-tel"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="tel" placeholder="Мобильный телефон">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <select>
+                            <option>Мужчина</option>
+                            <option>Женщина</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-building"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <select>
+                            <option>Усть-Каменогорск</option>
+                            <option>Алматы</option>
+                            <option>Астана</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#home" class="button active">Зарегестрироваться</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>    
+            </div>
+          </div>
+          <!-- Auto registration Page -->
+          <div data-page="auto_registration" class="page cached">
+            <div class="page-content">
+              <div class="content-block-title">Введите данные</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-car"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="text" placeholder="Гос номер">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-car"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#" class="item-link smart-select">
+                            <select name="fruits">
+                              <option value="nocheked">Не выбрано</option>
+                              <option value="mitsubishi" >Mitsubishi</option>
+                              <option value="toyota">Toyota</option>
+                              <option value="mersedes">Mersedes Bens</option>
+                              <option value="bmw">BMW</option>
+                            </select>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title">Марка</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-car"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#" class="item-link smart-select">
+                            <select name="models">
+                              <option value="nochaked">Не выбрано</option>
+                              <option value="galant" >Galant</option>
+                              <option value="z3">Z3</option>
+                              <option value="x5">X5</option>
+                            </select>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title">Модель</div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-car"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#" class="item-link smart-select">
+                            <select name="fruits">
+                              <option value="apple" selected="selected">Легковая</option>
+                              <option value="pineapple">Внедорожник или пикап</option>
+                              <option value="pear">Минивен или микроавтобус</option>
+                            </select>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title">Тип кузова</div>
+                              <div class="item-after">Легковая</div></div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#" class="button active back link">Добавить</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>    
+            </div>
+          </div>
+          <!-- Choice service Page -->
+          <div data-page="choice_service" class="page cached">
+            <div class="page-content">
+              <div class="content-block-title">Выберите комплекс услуг</div>
+              <div class="list-block media-list">
+                <ul>
+                  <li><a href="#washer_choice" class="item-link item-content">
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title orange">Minimal</div>
+                          <div class="item-after">~1000тг</div>
+                        </div>
+                        <div class="item-subtitle">Только кузов</div>
+                        <div class="item-text">Длительность: 15-20 минут</div>
+                      </div></a></li>
+                  <li><a href="#washer_choice" class="item-link item-content">
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title orange">Standart</div>
+                          <div class="item-after">~2000тг</div>
+                        </div>
+                        <div class="item-subtitle">Кузов+Салон</div>
+                        <div class="item-text">Длительность: 30-40 минут</div>
+                      </div></a></li>
+                  <li><a href="#washer_choice" class="item-link item-content">
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title orange">Standart+</div>
+                          <div class="item-after">~2500тг</div>
+                        </div>
+                        <div class="item-subtitle">Кузов+Салон+Багажник</div>
+                        <div class="item-text">Длительность:40-50 минут</div>
+                      </div></a></li>
+                  <li>
+                      <div class="item-inner">
+                        <a href="#shape_service" class="button">+ Сформировать комплекс услуг</a>
+                      </div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Shape service Page -->
+          <div data-page="shape_service" class="page cached">
+            <div class="page-content">
+              <div class="content-block-title">Выберите услуги</div>
+              <div class="list-block media-list">
+                <ul>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-media-checkbox" value="1">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title orange">Кузов</div>
+                          <div class="item-after">1000тг</div>
+                        </div>
+                        <div class="item-subtitle">Длительность: 20-30 минут</div>
+                        <div class="item-text">Мытье кузова специальными водными растворами. </div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-media-checkbox" value="2">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title orange">Салон</div>
+                          <div class="item-after">~1000тг</div>
+                        </div>
+                        <div class="item-subtitle">Длительность: 15-20 минут</div>
+                        <div class="item-text">Чистка, мытье салона. Мытье ковриков. Сухая чистка сидений.</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-media-checkbox" value="3">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title orange">Багажник</div>
+                          <div class="item-after">~500тг</div>
+                        </div>
+                        <div class="item-subtitle">Длительность: 10-15 минут</div>
+                        <div class="item-text">Сухая и влажная чиства багажника.</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-media-checkbox" value="4">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title orange">Полировка</div>
+                          <div class="item-after">~1000тг</div>
+                        </div>
+                        <div class="item-subtitle">Длительность: 15-20 минут</div>
+                        <div class="item-text">Полировка кузова специальными средствами.</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div> 
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <input type="text" placeholder="Наименование комплекса услуг">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#" class="button active back link">Сформировать</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>     
+            </div>
+          </div>
+          <!-- Washer choice Page -->
+          <div data-page="washer_choice" class="page cached">
+            <div class="page-content">
+              <div class="list-block media-list">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <a href="#" class="button button-round">Мое местоположение</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block-title">Выберите Автомойку</div>
+              <div class="list-block media-list">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="buttons-row">
+                          <a href="#" class="button button-round active">км</a>
+                          <a href="#" class="button button-round">цена</a>
+                          <a href="#" class="button button-round">сеанс</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li><a href="#time_choice" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title orange">Cупер Мойка</div>
+                        <div class="item-after">2000тг</div>
+                      </div>
+                      <div class="item-subtitle">пр.Сатпаева 1/1 - 0,2км.</div>
+                      <div class="item-text">Кузов+Салон. Сеансы: 11:00,14:00,16:00.</div>
+                    </div></a></li>
+                  <li><a href="#time_choice" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title orange">Мега Мойка</div>
+                        <div class="item-after">1850тг</div>
+                      </div>
+                      <div class="item-subtitle">ул. Казахстан 64/2 - 0,5км</div>
+                      <div class="item-text">Кузов+Салон. Сеансы: 12:00,13:30,14:00.</div>
+                    </div></a></li>
+                  <li><a href="#time_choice" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title orange">Мойдодыр</div>
+                        <div class="item-after">2200тг</div>
+                      </div>
+                      <div class="item-subtitle">ул. Кабанбай-Батыра 41 - 2,5км</div>
+                      <div class="item-text">Кузов+Салон. Сеансы: 10:00.</div>
+                    </div></a></li>
+                </ul>
+              </div>
+            </div> 
+          </div>
+          <!-- Time choice Page -->
+          <div data-page="time_choice" class="page cached">
+            <div class="page-content">  
+              <div class="card">
+                <div class="card-header orange">Cупер Мойка</div>
+                <div class="card-content"> 
+                  <div class="card-content-inner">
+                  <i class="icon icon-form-garage"></i>
+                  <p>пр.Сатпаева 1/1 - 0,2км.</p>
+                  <p>Кузов+Салон=2000тг.</p>
+                  <p>BMW X5 - F001AAA</p>
+                  </div>
+                </div>
+                <div class="list-block">
+                  <div class="list-group">
+                    <ul>
+                      <li class="item-content orange">Сегодня</li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">11:00</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">13:00</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">16:00</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list-group">
+                    <ul>
+                      <li class="item-content orange">Завтра</li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">10:00</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">11:00</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">15:00</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list-group">
+                    <ul>
+                      <li class="item-content orange">24.05.2015</li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">14:00</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">15:00</div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#send_tiket" class="item-link item-content">
+                          <div class="item-inner"> 
+                            <div class="item-title">20:00</div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>                  
+                </div>
+              </div>
+            </div> 
+          </div>
+          <!-- Send tiket Page -->
+          <div data-page="send_tiket" class="page cached">
+            <div class="page-content">  
+              <div class="card">
+                <div class="card-header orange">Cупер Мойка</div>
+                <div class="card-content"> 
+                  <div class="card-content-inner">
+                    <i class="icon icon-form-garage"></i>
+                    <p>пр.Сатпаева 1/1 - 0,2км.</p>
+                    <p>Кузов+Салон=2000тг.</p>
+                    <p>BMW X5 - F001AAA</p>
+                    <p>Сегодня - 15:00</p>
+                    <p>Бокс №1</p>
+                    <p><a href="#home" class="button button-round">Отправить заявку</a></p>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <!-- Home Page-->
+          <div data-page="home" class="page cached">
+            <div class="page-content">
+              <div class="content-block-title">Помыть авто</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-car"></i></div>
+                      <div class="item-inner"> 
+                        <a href="#choice_service" class="button">Mitsubishi Galant</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-car"></i></div>
+                      <div class="item-inner"> 
+                        <a href="#choice_service" class="button">BMW X5</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-car"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-input">
+                          <a href="#auto_registration" class="button">+ Добавить авто</a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block-title">Ваши заявки</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-garage"></i></div>
+                      <div class="item-inner"> 
+                        <a href="#send_tiket" class="button">BMW X5 - Сегоня в 15:00</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- About Page-->
+          <div data-page="about" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+                <p>You may go <a href="#" class="back">back</a> or load <a href="#services">Services</a> page.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor.    </p>
+                <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+                <p>Suspendisse commodo adipiscing urna, a aliquet sem egestas in. Sed tincidunt dui a magna facilisis bibendum. Nunc euismod consectetur lorem vitae molestie. Proin mattis tellus libero, non hendrerit neque eleifend ac. Pellentesque interdum velit at lacus consectetur scelerisque et id dui. Praesent non fringilla dui, a elementum purus. Proin vitae lacus libero. Nunc eget lectus non mi iaculis interdum vel a velit. Nullam tincidunt purus id lacus ornare, at elementum turpis euismod. Cras mauris enim, congue eu nisl sit amet, pulvinar semper erat. Suspendisse sed mauris diam.</p>
+                <p>Nam eu mauris leo. Pellentesque aliquam vehicula est, sed lobortis tellus malesuada facilisis. Fusce at hendrerit ligula. Donec eu nibh convallis, pulvinar enim quis, lacinia diam. Ut semper ac magna nec ornare. Integer placerat justo sed nunc suscipit facilisis. Vestibulum ac tincidunt augue. Duis eu aliquet mauris, vel luctus mauris. Nulla non augue nec diam pharetra posuere at in mauris.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Services Page-->
+          <div data-page="services" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+                <p>You may go <a href="#" class="back">back</a> or load <a href="#about">About</a> page.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor.    </p>
+                <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+                <p>Suspendisse commodo adipiscing urna, a aliquet sem egestas in. Sed tincidunt dui a magna facilisis bibendum. Nunc euismod consectetur lorem vitae molestie. Proin mattis tellus libero, non hendrerit neque eleifend ac. Pellentesque interdum velit at lacus consectetur scelerisque et id dui. Praesent non fringilla dui, a elementum purus. Proin vitae lacus libero. Nunc eget lectus non mi iaculis interdum vel a velit. Nullam tincidunt purus id lacus ornare, at elementum turpis euismod. Cras mauris enim, congue eu nisl sit amet, pulvinar semper erat. Suspendisse sed mauris diam.</p>
+                <p>Nam eu mauris leo. Pellentesque aliquam vehicula est, sed lobortis tellus malesuada facilisis. Fusce at hendrerit ligula. Donec eu nibh convallis, pulvinar enim quis, lacinia diam. Ut semper ac magna nec ornare. Integer placerat justo sed nunc suscipit facilisis. Vestibulum ac tincidunt augue. Duis eu aliquet mauris, vel luctus mauris. Nulla non augue nec diam pharetra posuere at in mauris.     </p>
+              </div>
+            </div>
+          </div>
+          <!-- Form Page-->
+          <div data-page="form" class="page cached">
+            <div class="page-content">
+              <div class="content-block-title">Form Example</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-name"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Name</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Your name">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-email"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">E-mail</div>
+                        <div class="item-input">
+                          <input type="email" placeholder="E-mail">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-url"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">URL</div>
+                        <div class="item-input">
+                          <input type="url" placeholder="URL">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-password"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Password</div>
+                        <div class="item-input">
+                          <input type="password" placeholder="Password">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-tel"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Phone</div>
+                        <div class="item-input">
+                          <input type="tel" placeholder="Phone">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Gender</div>
+                        <div class="item-input">
+                          <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Birth date</div>
+                        <div class="item-input">
+                          <input type="date" placeholder="Birth day" value="2014-04-30">
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-toggle"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Switch</div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox">
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-settings"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Slider</div>
+                        <div class="item-input">
+                          <div class="range-slider">
+                            <input type="range" min="0" max="100" value="50" step="0.1">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="align-top">
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Textarea</div>
+                        <div class="item-input">
+                          <textarea></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block">
+                <div class="row">
+                  <div class="col-50"><a href="#" class="button button-big button-fill color-red">Cancel</a></div>
+                  <div class="col-50">
+                    <input type="submit" value="Submit" class="button button-big button-fill color-green">
+                  </div>
+                </div>
+              </div>
+              <div class="content-block-title">Checkbox group</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Books" checked>
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Books</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Movies">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Movies</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Food">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Food</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-checkbox item-content">
+                      <input type="checkbox" name="ks-checkbox" value="Drinks">
+                      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title">Drinks</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block-title">Radio buttons group</div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Books" checked>
+                      <div class="item-inner">
+                        <div class="item-title">Books</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Movies">
+                      <div class="item-inner">
+                        <div class="item-title">Movies</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Food">
+                      <div class="item-inner">
+                        <div class="item-title">Food</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="label-radio item-content">
+                      <input type="radio" name="ks-radio" value="Drinks">
+                      <div class="item-inner">
+                        <div class="item-title">Drinks</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="dist/js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+  </body>
+</html>
